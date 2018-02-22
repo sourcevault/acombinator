@@ -1,6 +1,7 @@
 
 wp = new WeakMap()
 
+A = (Fn) -> (x) -> Fn x
 
 main = (Fn) ->
 
@@ -12,9 +13,10 @@ main = (Fn) ->
 
 	else
 
-		A = (x) -> Fn x
+		out = A Fn
 
-		wp.set Fn, A
+		wp.set Fn,out
 
+		out
 
-module.export = main
+module.exports = main
