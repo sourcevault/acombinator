@@ -11,8 +11,9 @@
       A = function(x){
         return Fn(x);
       };
-      return wp.set(Fn, A);
+      wp.set(Fn, A);
+      return A;
     }
   };
-  module['export'] = main;
+  module.exports = main;
 }).call(this);
